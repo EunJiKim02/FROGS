@@ -29,7 +29,7 @@ for SCENE_PATH in "$ROOT"/*; do
         PSNR=$(grep "PSNR" metrics_tmp.log | awk '{print $3}')
         LPIPS=$(grep "LPIPS" metrics_tmp.log | awk '{print $2}')
 
-        python ../../update_sheet.py "$SHEET_NAME" "$SCENE" "$SSIM" "$PSNR" "$LPIPS" "$TRAIN_TIME" "$RENDER_TIME" "$VRAM_MAX"
+        python ../../update_sheet.py "$SHEET_NAME" "$SCENE" "$SSIM" "$PSNR" "$LPIPS" "" "$TRAIN_TIME" "$RENDER_TIME" "$VRAM_MAX"
 
 
 
